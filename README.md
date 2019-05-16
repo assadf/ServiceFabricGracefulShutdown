@@ -6,7 +6,7 @@ Test and Simulate Service Fabric Graceful shutdown. (This is not currently worki
 - Service Fabric SDK 3.2.162.9494
 
 ## Running
-When building the solution, Ensure that Build and Deploy has been ticked for SFGracefulShutdownApp (Service Fabric project).  Call the following endpoint to test API call: http://localhost:19081/SFGracefulShutdownApp/MyService.Api/api/values.
+When building the solution, Ensure that Build and Deploy has been ticked for SFGracefulShutdownApp (Service Fabric project).  Call the following endpoint to test API call: http://localhost:19081/SFGracefulShutdownApp/MyService.Api/api/values or http://localhost:19081/SFGracefulShutdownApp/MyService.Api/api/values?delay=5 to simulate a long running request (this example says delay by 5 seconds before completing).
 
 To simulate a graceful shutdown, use the following powershell command (ref https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-testability-actions):
 
