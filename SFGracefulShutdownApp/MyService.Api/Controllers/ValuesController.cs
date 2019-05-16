@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MyService.Api.Controllers
@@ -9,8 +10,10 @@ namespace MyService.Api.Controllers
     {
         // GET api/values
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery]int delay = 0)
         {
+            await Task.Delay(TimeSpan.FromSeconds(delay));
+
             return Ok("Hello from My Service");
         }
     }
