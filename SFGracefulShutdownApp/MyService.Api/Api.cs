@@ -33,7 +33,7 @@ namespace MyService.Api
             return new ServiceInstanceListener[]
             {
                 new ServiceInstanceListener(serviceContext =>
-                    new HttpSysCommunicationListener(serviceContext, "ServiceEndpoint", (url, listener) =>
+                    new MyHttpListener(serviceContext, "ServiceEndpoint", (url, listener) =>
                     {
                         ServiceEventSource.Current.ServiceMessage(serviceContext, $"Starting Http Sys on {url}");
 
