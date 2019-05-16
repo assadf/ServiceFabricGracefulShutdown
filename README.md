@@ -17,7 +17,7 @@ Connect-ServiceFabricCluster $connection
 
 $OperationId = New-Guid
 
-Start-ServiceFabricPartitionRestart -OperationId $OperationId -RestartPartitionMode AllReplicasOrInstances -ServiceName "fabric:/MicroService1App/ServiceA" -PartitionKindSingleton
+Start-ServiceFabricPartitionRestart -OperationId $OperationId -RestartPartitionMode AllReplicasOrInstances -ServiceName "fabric:/SFGracefulShutdownApp/MyService.Api" -PartitionKindSingleton
 ```
 
 ## References
