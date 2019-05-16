@@ -20,7 +20,9 @@ namespace MyService.Api
     {
         public Api(StatelessServiceContext context)
             : base(context)
-        { }
+        {
+            ServiceStatusLog.Instance.InflightRequestCount = 1;
+        }
 
         /// <summary>
         /// Optional override to create listeners (like tcp, http) for this service instance.
